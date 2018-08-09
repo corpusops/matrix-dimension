@@ -47,7 +47,7 @@ export class JitsiWidgetConfigComponent extends WidgetComponent {
             } else widget.data.conferenceId = conferenceId;
 
             if (domain) widget.data.domain = domain;
-            else widget.data.domain = "jitsi.riot.im";
+            else widget.data.domain = "meet.jit.si";
 
             if (isAudioConf !== null) {
                 // It's a legacy Dimension widget
@@ -61,7 +61,7 @@ export class JitsiWidgetConfigComponent extends WidgetComponent {
     protected OnNewWidgetPrepared(widget: EditableWidget): void {
         const name = this.nameService.getHumanReadableName();
 
-        let rootUrl = "https://jitsi.riot.im/";
+        let rootUrl = "https://meet.jit.si/";
         if (this.jitsiWidget.options && this.jitsiWidget.options.jitsiDomain) {
             rootUrl = "https://" + this.jitsiWidget.options.jitsiDomain + "/";
         }
